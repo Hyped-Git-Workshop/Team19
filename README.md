@@ -132,7 +132,34 @@
             return this->position;
             ```
         * Wait for your teammate to `git push` before you `git pull --rebase`
-
+9. Person B `git push`es first
+    - Person A - `bms.h` and `bms.cpp` - Sensing voltage
+        * Open `bms.h`, locate place for TASK 9 and copy the following code there
+            ```c++
+            double get_voltage();
+            ```
+        * Open `bms.cpp`, locate place for TASK 9 and copy the following code there. Change the 0 to something else.
+            ```c++
+            double BatteryManagementSystem::get_voltage()
+            {
+              return 0;
+            }
+            ```
+        * Commit both files in a single commit
+        * Wait for your teammate to `git push` before you `git pull --rebase`
+        * **SLOW DOWN** You've got a conflict. Now go and carefully resolve it. Take your time.
+    - Person B - `bms.h` and `bms.cpp` - Sensing current
+        * Open `bms.h`, locate place for TASK 9 and copy the following code there
+            ```c++
+            double get_current();
+            ```
+        * Open `bms.cpp`, locate place for TASK 9 and copy the following code there. Change the 0 to something else.
+            ```c++
+            double BatteryManagementSystem::get_current()
+            {
+              return 0;
+            }
+            ```
 
 
 ### Summary of tasks
@@ -146,5 +173,5 @@
 | 6 |                                                                      | BMS - create `bms.cpp` and `bms.h` and update `Makefile`     |
 | 7 | Accelerometer error - edit `accelerometer.h`<br>`git pull --rebase`  | Edit `navigation.cpp` - adding accelerometers                |
 | 8 | Edit  `navigation.cpp` - get velocity                                | Edit `navigation.cpp` - get position<br>`git pull -- rebase` |
-
+| 9 | Edit `bms.h` and `bms.cpp` - get voltage<br>`git pull --rebase` & resolve conflicts | Edit `bms.h` and `bms.cpp` - get current      |
 
