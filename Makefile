@@ -5,11 +5,11 @@ CFLAGS = -std=c++11 -Wall -c -O3 $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
 ### TASK 5 (PERSON A) #########################################################
-#main : main.o pod.o accelerometer.o
-#	$(CC) $(OBJS) $(LFLAGS) main.o -o main
-#
-#main.o : main.cpp pod.h accelerometer.h
-#	$(CC) $(CFLAGS) main.cpp
+main : main.o pod.o accelerometer.o
+	$(CC) $(OBJS) $(LFLAGS) main.o -o main
+
+main.o : main.cpp pod.h accelerometer.h
+	$(CC) $(CFLAGS) main.cpp
 ### END OF TASK 5 (PERSON A) ##################################################
 
 pod.o : pod.cpp pod.h accelerometer.h
