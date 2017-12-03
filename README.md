@@ -1,3 +1,8 @@
+# Thank you, you have completed all the exercises.
+
+Please change this text and leave your feedback on the workshop here.
+
+
 # Git Exercise
 
 1. Each person in the pair needs to `git clone` this repo
@@ -160,6 +165,37 @@
               return 0;
             }
             ```
+10. Person A `git push`es first
+    - Person A - `pod.h` and `Makefile` - Integrate battery management system with the pod
+        * Open `pod.h`, locate TASK 10.1, and include the BMS header by copying the following code
+            ```c++
+            #include "bms.h"
+            ```
+        * Locate TASK 10.2 and declare the BMS field as follows
+            ```c++
+            BatteryManagementSystem bms;
+            ```
+        * Open `Makefile`
+            * Append ```bms.h``` to the lines starting with ```pod.o :``` and ```main.o :```
+            * Append ```bms.o``` to the lines starting with ```main :``` and ```OBJS = ```
+    - Person B - `pod.h`, `pod.cpp` and `Makefile` - Integrate navigation system with the pod
+        * Open `pod.h`, locate TASK 10.1, and include the navigation header by copying the following code
+            ```c++
+            #include "navigation.h"
+            ```
+        * Locate TASK 10.2 and declare the nav field as follows
+            ```c++
+            Navigation nav;
+            ```
+        * Open `pod.cpp`, locate TASK 10, and initialize the navigation system with one accelerometer as follows
+            ```c++
+            this->nav.add_accelerometer(new Accelerometer);
+            ```
+        * Open `Makefile`
+            * Append ```navigation.h``` to the lines starting with ```pod.o :``` and ```main.o :```
+            * Append ```navigation.o``` to the lines starting with ```main :``` and ```OBJS = ```
+        * Wait for your teammate to `git push` before you `git pull --rebase`
+        * **SLOW DOWN** You've got some conflicts. Now go and carefully resolve them. Take your time.
 
 
 ### Summary of tasks
@@ -174,4 +210,4 @@
 | 7 | Accelerometer error - edit `accelerometer.h`<br>`git pull --rebase`  | Edit `navigation.cpp` - adding accelerometers                |
 | 8 | Edit  `navigation.cpp` - get velocity                                | Edit `navigation.cpp` - get position<br>`git pull -- rebase` |
 | 9 | Edit `bms.h` and `bms.cpp` - get voltage<br>`git pull --rebase` & resolve conflicts | Edit `bms.h` and `bms.cpp` - get current      |
-
+| 10 | Integrate BMS to pod - edit `pod.h` and `Makefile`                  | Integrate navigation to pod - edit `pod.h`, `pod.cpp` and `Makefile`<br>`git pull --rebase` & resolve conflicts |
