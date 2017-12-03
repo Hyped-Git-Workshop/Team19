@@ -10,6 +10,9 @@
 1. Person A - `pod.cpp` - Name your pod
     * Open `pod.cpp` file and locate TASK 1
     * Type the name for your pod inside the double-quotes (you should discuss the choice of the name with your teammate)
+2. Person B - `pod.cpp` - Choose max speed
+    * Open `pod.cpp` file and locate TASK 2
+    * Tell us what the max speed of your pod is by replacing the 0 in the code with a real number
 
 
 
@@ -17,3 +20,4 @@
 |Task # | Person A                                                         | Person B                                                     |
 |:----|--------------------------------------------------------------------|--------------------------------------------------------------|
 | 1 | Name your pod - edit `pod.cpp`                                       |                                                              |
+| 2 |                                                                      |  Max speed - edit `pod.cpp`                                  |
