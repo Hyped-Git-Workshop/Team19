@@ -104,6 +104,18 @@
         ```
     * Notice the difference in the output of `git status` for the newly created file
     * Commit `bms.h` and `bms.cpp` in one commit and `Makefile` in separate commits
+7. **CHANGE: both people work simultaneously on different pieces of code from now on** - Person B `git push`es first
+    - Person A - `accelerometer.h` - Define accelerometer's error
+        * Open `accelerometer.h`, locate place for TASK 7 and edit the line so that it looks something like below (0 is best but also most boring)
+            ```c++
+            double error = <real_number_here>;
+            ```
+        * Wait for your teammate to `git push` before you `git pull --rebase`
+    - Person B - `navigation.cpp` - Implement way for adding accelerometers to the navigation system
+        * Open `navigation.cpp`, locate the place for TASK 7 and copy the following code there
+            ```c++
+            this->accelerometers.push_back(a);
+            ```
 
 
 
@@ -116,5 +128,6 @@
 | 4 |                                                                      | Pressure vessel pressure - edit `pod.h` and `pod.cpp`        |
 | 5 | Create `main.cpp` and update `Makefile`                              |                                                              |
 | 6 |                                                                      | BMS - create `bms.cpp` and `bms.h` and update `Makefile`     |
+| 7 | Accelerometer error - edit `accelerometer.h`<br>`git pull --rebase`  | Edit `navigation.cpp` - adding accelerometers                |
 
 
