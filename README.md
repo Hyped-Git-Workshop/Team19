@@ -65,6 +65,45 @@
         ```
     * Notice the difference in the output of `git status` for the newly created file
     * Commit `main.cpp` and `Makefile` in separate commits
+6. Person B - `bms.cpp`, `bms.h` and `Makefile` - Battery management system
+    * Create a new file called `bms.h` and copy the following code to it
+        ```c++
+        #ifndef HYPED_GIT_WSHOP_BMS_H
+        #define HYPED_GIT_WSHOP_BMS_H
+        
+        
+        class BatteryManagementSystem
+        {
+          public:
+            BatteryManagementSystem();
+        
+            /// TASKS 9 (BOTH) /////////////////////////////////////////////////////////
+            
+            /// END OF TASKS 9AB ///////////////////////////////////////////////////////
+        };
+        
+        
+        #endif //HYPED_GIT_WSHOP_BMS_H
+        ```
+    * Create a new file called `bms.cpp` and copy the following code to it
+        ```c++
+        #include "bms.h"
+
+        BatteryManagementSystem::BatteryManagementSystem()
+        {
+        }
+
+        /// TASK 9 (BOTH) //////////////////////////////////////////////////////////////
+        
+        /// END OF TASKS 9AB ///////////////////////////////////////////////////////////
+        ```
+    * Open `Makefile`, locate place for TASK 6 and uncomment the code there to get something like
+        ```mk
+        bms.o : bms.cpp bms.h
+	        $(CC) $(CFLAGS) bms.cpp
+        ```
+    * Notice the difference in the output of `git status` for the newly created file
+    * Commit `bms.h` and `bms.cpp` in one commit and `Makefile` in separate commits
 
 
 
@@ -76,5 +115,6 @@
 | 3 | Pressure vessel temperature - edit `pod.h` and `pod.cpp`             |                                                              |
 | 4 |                                                                      | Pressure vessel pressure - edit `pod.h` and `pod.cpp`        |
 | 5 | Create `main.cpp` and update `Makefile`                              |                                                              |
+| 6 |                                                                      | BMS - create `bms.cpp` and `bms.h` and update `Makefile`     |
 
 
