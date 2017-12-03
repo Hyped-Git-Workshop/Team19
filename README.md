@@ -116,6 +116,22 @@
             ```c++
             this->accelerometers.push_back(a);
             ```
+8. Person A `git push`es first
+    - Person A - `navigation.cpp` - Implement calculation of velocity from acceleration
+        * Open `navigation.cpp`, locate the place for your part of TASK 8 (inside `get_velocity()` function) and copy the following code there
+            ```c++
+            double a = this->get_acceleration();
+            this->velocity += a*DT; //integrate
+            return this->velocity;
+            ```
+    - Person B - `navigation.cpp` - Implement calculation of position from velocity
+        * Open `navigation.cpp`, locate the place for your part of TASK 8 (inside `get_position()` function) and copy the following code there
+            ```c++
+            double v = this->get_velocity();
+            this->position += v*DT; //integrate
+            return this->position;
+            ```
+        * Wait for your teammate to `git push` before you `git pull --rebase`
 
 
 
@@ -129,5 +145,6 @@
 | 5 | Create `main.cpp` and update `Makefile`                              |                                                              |
 | 6 |                                                                      | BMS - create `bms.cpp` and `bms.h` and update `Makefile`     |
 | 7 | Accelerometer error - edit `accelerometer.h`<br>`git pull --rebase`  | Edit `navigation.cpp` - adding accelerometers                |
+| 8 | Edit  `navigation.cpp` - get velocity                                | Edit `navigation.cpp` - get position<br>`git pull -- rebase` |
 
 
